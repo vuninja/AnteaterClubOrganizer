@@ -1,0 +1,56 @@
+
+body{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#display_window{
+    border: solid 4px black;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 50px;
+}
+
+button{
+    background-color: white;
+    color: black;
+    border: 3px solid #555555;
+    border-radius: 5px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+button:not(#longButton):not(#homeButton){
+    width: 180px;
+}
+
+button#longButton{
+    width: 400px;
+}
+
+button#homeButton{
+    position: absolute;
+    left:0;
+    padding: 15px;
+}
+
+.homeButtonAndTitle{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+    padding: 0;
+}

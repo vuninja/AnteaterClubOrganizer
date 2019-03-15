@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" id="anteaterClubOrganizer">
+<head>
+	<meta charset="utf-8">
+    <title>Anteater Club Organizer</title>
+
+    <link rel = "stylesheet" href = "CSS/input_page.css">
+</head>
+
+<body onload="inputPageOnLoad()">
+	
+	<div id="topBar">
+		<div class="blueBar">
+			<a href="index.html">
+				<img class="logo" src="Logo.png" alt="logo"/>
+			</a>
+		</div>
+	</div>
+	
+    <h1 class="direct">Enter your information</h1>
+    <!--input spaces-->
+        <div class = "inputSheet">
+           <form id = "memberForm" autocomplete="off">
+            <input class="inputBox" type="text" id = "first_name" placeholder="Name"/><sup style="color:red;">*</sup><br>
+            <input class="inputBox" type="text" id = "email" placeholder="Email"/><sup style="color:red;">*</sup><br>
+            <input class="inputBox" type="text" id = "phone" placeholder="Phone"/><br>
+            <input class="inputBox" type="text" id = "major" placeholder="Major"/><br>
+			<sup style="color:red;">*</sup><sup>-required</sup>
+           </form>
+        </div>
+
+    <button type="button" onclick="submit()">Submit</button> <br>
+    <button type="button" onclick= "viewData()" >View Data</button> <br>
+
+    <p id = "displayName"></p>
+    <p id = "displayEmail"></p>
+    <p id = "displayPhone"></p>
+    <p id = "displayMajor"></p>
+    <p id = "displayArray"></p>
+	
+	<button class="collapsible" onclick="collapse()">More Tools</button>
+	<div id="moreTools">
+		<div class="selectBG">
+			<p>Please select your preffered background image</p>
+			<select onchange="changeBG(this.value)">
+				<option value="" disabled selected hidden>Select background</option>
+				<option value="none">None</option>
+				<option value="bball" >Basketball</option>
+				<option value="soccer" >Soccer</option>
+				<option value="football" >Football</option>
+				<option value="water" >Water</option>
+				<option value="track" >Track &amp; Field | Running</option>
+			</select>
+		</div>
+	</div>
+</body>
+
+<script src="Scripts/database.js"></script> 
+
+</html>

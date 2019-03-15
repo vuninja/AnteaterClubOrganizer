@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anteater Club Organizer</title>
+
+    <link rel = "stylesheet" href = "CSS/output_page.css">
+</head>
+
+
+<body onload="display()">
+    <div class = "homeButtonAndTitle"><button type="button"  id = "homeButton" onclick= "goHome()" >Home</button> <br>
+    <h1>Output Overview</h1></div>
+    <!--Field to display stored reason-->
+    <div id = "display_window">
+        <h2>Information Stored:</h2>
+    </div>
+
+    <button type="button" onclick="outputToCSV()">Ouput to CSV</button> 
+    <button type="button" onclick="resetButton()">Reset Data</button> 
+    <br><br>
+
+    <p>Please select a CSV file to upload by clicking "Choose File". Then click "Load CSV" to load the data to the page.</p> 
+    
+    <input id="csv_inputed" type="file" accept=".csv">
+    <a id=dummy_download>
+
+    <button type="button" onclick="inputFromCSV()">Load CSV</button> 
+
+    <br><br><br>
+    <button type="button" id = "longButton" onclick="outputAsEmailString()">Output Email Addresses to Recipient String</button> 
+    <p id = "displayEmailString"></p>
+
+
+<br><br>
+</body>
+
+<script src="Scripts/database.js"></script> 
+
+</html>
